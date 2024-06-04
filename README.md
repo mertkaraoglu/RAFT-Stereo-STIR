@@ -1,3 +1,14 @@
+# RAFT-Stereo onnx and torchscript for STIR challenge
+
+This repository is a fork of RAFT-Stereo (see later section) for the [STIR Challenge](https://stir-challenge.github.io)
+
+The main addition is the `raft_stereo_to_onnx.py` file which converts from the RAFT model to both a torchscript `raft_stereoSTIR.pt` and ONNX `raft_stereoSTIR.onnx` which can be used as the RAFT model for [STIRMetrics](https://github.com/athaddius/STIRMetrics)
+
+To export the models:
+1. Create a folder `./demo-frames` and add a pair of `left.{png, jpg}`, `right.{png, jpg}`
+2. Download the models from the link below and export them to `./models` 
+3. Install RAFT-Stereo dependencies from the following section. Then run `python rafttoonnx.py`
+
 # RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching
 This repository contains the source code for our paper:
 
